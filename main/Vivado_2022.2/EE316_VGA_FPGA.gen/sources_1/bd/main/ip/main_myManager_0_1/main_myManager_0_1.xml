@@ -580,11 +580,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 11 16:39:54 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 19:10:59 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c1beed01</spirit:value>
+            <spirit:value>9:355906d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -595,7 +595,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c1beed01</spirit:value>
+            <spirit:value>9:355906d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -611,11 +611,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 11 16:39:54 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 19:10:59 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c1beed01</spirit:value>
+            <spirit:value>9:355906d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -631,11 +631,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 11 16:39:54 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 19:10:59 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6d76369e</spirit:value>
+            <spirit:value>9:77aefdca</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -651,11 +651,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 11 16:39:54 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 19:10:59 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6d76369e</spirit:value>
+            <spirit:value>9:77aefdca</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -669,11 +669,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 11 16:40:14 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 19:11:21 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c1beed01</spirit:value>
+            <spirit:value>9:355906d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -683,45 +683,6 @@
         <spirit:name>IRQ_i</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>m00_axi_init_axi_txn</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>m00_axi_error</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>m00_axi_txn_done</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
@@ -1076,6 +1037,16 @@
     -- and read transactions the master will perform as a part of this example memory test.</spirit:description>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_TRANSACTIONS_NUM" spirit:order="7" spirit:minimum="1" spirit:rangeType="long">4</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>C_M_PS2_SLAVE_BASE_ADDR</spirit:name>
+        <spirit:displayName>C M Ps2 Slave Base Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_PS2_SLAVE_BASE_ADDR" spirit:bitStringLength="32">0x40000000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>C_M_VIDEOMEM_BASE_ADDR</spirit:name>
+        <spirit:displayName>C M Videomem Base Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_VIDEOMEM_BASE_ADDR" spirit:bitStringLength="32">0x40010000</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
@@ -1098,11 +1069,19 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/0447/hdl/myManager_v1_0_M00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/18c8/src/char8x12_lookup_table.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0447/hdl/myManager_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/18c8/hdl/myManager_v1_0_M00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/18c8/src/scancode2ascii.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/18c8/hdl/myManager_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1117,11 +1096,19 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/0447/hdl/myManager_v1_0_M00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/18c8/src/char8x12_lookup_table.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0447/hdl/myManager_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/18c8/hdl/myManager_v1_0_M00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/18c8/src/scancode2ascii.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/18c8/hdl/myManager_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1224,11 +1211,21 @@
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">main_myManager_0_1</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M_PS2_SLAVE_BASE_ADDR</spirit:name>
+      <spirit:displayName>C M Ps2 Slave Base Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M_PS2_SLAVE_BASE_ADDR" spirit:bitStringLength="32">0x40000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M_VIDEOMEM_BASE_ADDR</spirit:name>
+      <spirit:displayName>C M Videomem Base Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M_VIDEOMEM_BASE_ADDR" spirit:bitStringLength="32">0x40010000</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>myManager_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -1275,10 +1272,10 @@
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="188e99b4"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="55bfeea0"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="69551ec7"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="54238b17"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="042b06be"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="c9b9d7f8"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1af25651"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="899f56e4"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="a3f3ac78"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b4e13f9b"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

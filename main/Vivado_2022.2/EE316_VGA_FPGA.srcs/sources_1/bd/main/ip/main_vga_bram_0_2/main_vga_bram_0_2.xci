@@ -4,7 +4,7 @@
     "xci_name": "main_vga_bram_0_2",
     "cell_name": "vga_bram_0",
     "component_reference": "solathomas.com:Project_6:vga_bram:1.0",
-    "ip_revision": "1",
+    "ip_revision": "2",
     "gen_directory": "../../../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_vga_bram_0_2",
     "parameters": {
       "component_parameters": {
@@ -35,7 +35,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "1" } ],
+        "IPREVISION": [ { "value": "2" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_vga_bram_0_2" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

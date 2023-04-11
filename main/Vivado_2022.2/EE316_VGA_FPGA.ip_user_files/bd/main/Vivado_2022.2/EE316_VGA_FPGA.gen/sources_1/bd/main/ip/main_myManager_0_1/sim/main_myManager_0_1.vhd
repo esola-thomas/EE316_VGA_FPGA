@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: solathomas.com:Project_6:myManager:1.0
--- IP Revision: 2
+-- IP Revision: 4
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -56,9 +56,6 @@ USE ieee.numeric_std.ALL;
 ENTITY main_myManager_0_1 IS
   PORT (
     IRQ_i : IN STD_LOGIC;
-    m00_axi_init_axi_txn : IN STD_LOGIC;
-    m00_axi_error : OUT STD_LOGIC;
-    m00_axi_txn_done : OUT STD_LOGIC;
     m00_axi_aclk : IN STD_LOGIC;
     m00_axi_aresetn : IN STD_LOGIC;
     m00_axi_awaddr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -92,13 +89,12 @@ ARCHITECTURE main_myManager_0_1_arch OF main_myManager_0_1 IS
       C_M00_AXI_TARGET_SLAVE_BASE_ADDR : STD_LOGIC_VECTOR;
       C_M00_AXI_ADDR_WIDTH : INTEGER;
       C_M00_AXI_DATA_WIDTH : INTEGER;
-      C_M00_AXI_TRANSACTIONS_NUM : INTEGER
+      C_M00_AXI_TRANSACTIONS_NUM : INTEGER;
+      C_M_PS2_SLAVE_BASE_ADDR : STD_LOGIC_VECTOR;
+      C_M_VIDEOMEM_BASE_ADDR : STD_LOGIC_VECTOR
     );
     PORT (
       IRQ_i : IN STD_LOGIC;
-      m00_axi_init_axi_txn : IN STD_LOGIC;
-      m00_axi_error : OUT STD_LOGIC;
-      m00_axi_txn_done : OUT STD_LOGIC;
       m00_axi_aclk : IN STD_LOGIC;
       m00_axi_aresetn : IN STD_LOGIC;
       m00_axi_awaddr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -156,13 +152,12 @@ BEGIN
       C_M00_AXI_TARGET_SLAVE_BASE_ADDR => X"40000000",
       C_M00_AXI_ADDR_WIDTH => 32,
       C_M00_AXI_DATA_WIDTH => 32,
-      C_M00_AXI_TRANSACTIONS_NUM => 4
+      C_M00_AXI_TRANSACTIONS_NUM => 4,
+      C_M_PS2_SLAVE_BASE_ADDR => X"40000000",
+      C_M_VIDEOMEM_BASE_ADDR => X"40010000"
     )
     PORT MAP (
       IRQ_i => IRQ_i,
-      m00_axi_init_axi_txn => m00_axi_init_axi_txn,
-      m00_axi_error => m00_axi_error,
-      m00_axi_txn_done => m00_axi_txn_done,
       m00_axi_aclk => m00_axi_aclk,
       m00_axi_aresetn => m00_axi_aresetn,
       m00_axi_awaddr => m00_axi_awaddr,
