@@ -6,7 +6,7 @@
 <Project Version="7" Minor="61" Path="/repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.tmp/keyboard_subordinate_v1_0_project/keyboard_subordinate_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="b9d8162aae38437d98ebfcb864cee423"/>
+    <Option Name="Id" Val="ac971d10440245dfa80cbfc4a0c79170"/>
     <Option Name="Part" Val="xc7z007sclg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -50,7 +50,10 @@
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../master/VIvado_IPs/2022.2"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../home/esola-thomas/Downloads/EE316-Lab6-main/ip_repo/vga_bram_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../home/esola-thomas/Downloads/EE316-Lab6-main/ip_repo/keyboard_subordinate_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../home/esola-thomas/Downloads/EE316-Lab6-main/ip_repo/videomemlab_master_1.0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>

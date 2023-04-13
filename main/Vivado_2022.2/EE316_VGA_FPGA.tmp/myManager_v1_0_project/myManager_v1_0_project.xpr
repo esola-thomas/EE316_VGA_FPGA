@@ -6,7 +6,7 @@
 <Project Version="7" Minor="61" Path="/repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.tmp/myManager_v1_0_project/myManager_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="f871fc4d11394195bedd3218458c2469"/>
+    <Option Name="Id" Val="7c739ddfeeb94cce8a52f6b6c15aea6f"/>
     <Option Name="Part" Val="xc7z007sclg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -96,6 +96,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PPRDIR/../../../ip_repo/myManager_1_0/src/char8x12_lookup_table.vhd">
         <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -109,6 +110,7 @@
       </File>
       <File Path="$PPRDIR/../../../ip_repo/myManager_1_0/src/scancode2ascii.vhd">
         <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>

@@ -28,18 +28,22 @@ vcom -work xil_defaultlib -93  \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_proc_sys_reset_0_0/sim/main_proc_sys_reset_0_0.vhd" \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_clk_wiz_0_1/main_clk_wiz_0_1_sim_netlist.vhdl" \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_blinky_0_1/sim/main_blinky_0_1.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/edd2/src/debounce.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/edd2/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/edd2/src/ps2_keyboard.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/edd2/hdl/keyboard_subordinate_v1_0.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_keyboard_subordinate_0_1/sim/main_keyboard_subordinate_0_1.vhd" \
-"/repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_vga_bram_0_2/main_vga_bram_0_2_sim_netlist.vhdl" \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_xbar_0/main_xbar_0_sim_netlist.vhdl" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/18c8/src/char8x12_lookup_table.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/18c8/hdl/myManager_v1_0_M00_AXI.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/18c8/src/scancode2ascii.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/18c8/hdl/myManager_v1_0.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_myManager_0_1/sim/main_myManager_0_1.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/be08/src/bram.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/be08/src/list_ch12_01_vga_sync.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/be08/hdl/vga_bram_v1_0_S00_AXI.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/be08/hdl/vga_bram_v1_0.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_vga_bram_0_5/sim/main_vga_bram_0_5.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/91a5/src/char8x12_lookup_table.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/91a5/src/scancode2ascii.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/91a5/hdl/videomemlab_master_v1_0_M00_AXI.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/91a5/hdl/videomemlab_master_v1_0.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_videomemlab_master_0_1/sim/main_videomemlab_master_0_1.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/21cd/src/debounce.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/21cd/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/21cd/src/ps2_keyboard.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/21cd/hdl/keyboard_subordinate_v1_0.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_keyboard_subordinate_0_6/sim/main_keyboard_subordinate_0_6.vhd" \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/sim/main.vhd" \
 
 vlog -work xil_defaultlib \

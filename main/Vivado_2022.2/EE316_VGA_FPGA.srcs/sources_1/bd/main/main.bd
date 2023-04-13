@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x93787139648DF3A4",
+      "boundary_crc": "0x6AAEB5B19D5B372C",
       "device": "xc7z007sclg400-1",
       "gen_directory": "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main",
       "name": "main",
@@ -14,15 +14,15 @@
       "proc_sys_reset_0": "",
       "clk_wiz_0": "",
       "blinky": "",
-      "keyboard_subordinate_0": "",
       "videomemlab_0_axi_periph": {
         "xbar": "",
         "s00_couplers": {},
         "m00_couplers": {},
         "m01_couplers": {}
       },
-      "myManager_0": "",
-      "vga_bram_0": ""
+      "vga_bram_0": "",
+      "videomemlab_master_0": "",
+      "keyboard_subordinate_0": ""
     },
     "ports": {
       "reset_rtl": {
@@ -73,25 +73,25 @@
       "PS2_DATA": {
         "direction": "I"
       },
-      "vga_b": {
+      "VGA_B": {
         "direction": "O",
         "left": "3",
         "right": "0"
       },
-      "vga_g": {
+      "VGA_G": {
         "direction": "O",
         "left": "3",
         "right": "0"
       },
-      "vga_r": {
+      "VGA_R": {
         "direction": "O",
         "left": "3",
         "right": "0"
       },
-      "vysync": {
+      "VGA_VS": {
         "direction": "O"
       },
-      "hysync": {
+      "VGA_HS": {
         "direction": "O"
       }
     },
@@ -155,6 +155,9 @@
         "xci_path": "ip/main_blinky_0_1/main_blinky_0_1.xci",
         "inst_hier_path": "blinky",
         "parameters": {
+          "clk_freq": {
+            "value": "100000000"
+          },
           "out_off_mask": {
             "value": "0x00000021"
           },
@@ -194,12 +197,6 @@
             "right": "0"
           }
         }
-      },
-      "keyboard_subordinate_0": {
-        "vlnv": "Sola-Thomas:Project_6:keyboard_subordinate:1.0",
-        "xci_name": "main_keyboard_subordinate_0_1",
-        "xci_path": "ip/main_keyboard_subordinate_0_1/main_keyboard_subordinate_0_1.xci",
-        "inst_hier_path": "keyboard_subordinate_0"
       },
       "videomemlab_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
@@ -553,11 +550,17 @@
           }
         }
       },
-      "myManager_0": {
-        "vlnv": "solathomas.com:Project_6:myManager:1.0",
-        "xci_name": "main_myManager_0_1",
-        "xci_path": "ip/main_myManager_0_1/main_myManager_0_1.xci",
-        "inst_hier_path": "myManager_0",
+      "vga_bram_0": {
+        "vlnv": "xilinx.com:user:vga_bram:1.0",
+        "xci_name": "main_vga_bram_0_5",
+        "xci_path": "ip/main_vga_bram_0_5/main_vga_bram_0_5.xci",
+        "inst_hier_path": "vga_bram_0"
+      },
+      "videomemlab_master_0": {
+        "vlnv": "xilinx.com:user:videomemlab_master:1.0",
+        "xci_name": "main_videomemlab_master_0_1",
+        "xci_path": "ip/main_videomemlab_master_0_1/main_videomemlab_master_0_1.xci",
+        "inst_hier_path": "videomemlab_master_0",
         "interface_ports": {
           "M00_AXI": {
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -579,30 +582,30 @@
           }
         }
       },
-      "vga_bram_0": {
-        "vlnv": "solathomas.com:Project_6:vga_bram:1.0",
-        "xci_name": "main_vga_bram_0_2",
-        "xci_path": "ip/main_vga_bram_0_2/main_vga_bram_0_2.xci",
-        "inst_hier_path": "vga_bram_0"
+      "keyboard_subordinate_0": {
+        "vlnv": "Sola-Thomas:Project_6:keyboard_subordinate:1.0",
+        "xci_name": "main_keyboard_subordinate_0_6",
+        "xci_path": "ip/main_keyboard_subordinate_0_6/main_keyboard_subordinate_0_6.xci",
+        "inst_hier_path": "keyboard_subordinate_0"
       }
     },
     "interface_nets": {
-      "myManager_0_M00_AXI": {
-        "interface_ports": [
-          "myManager_0/M00_AXI",
-          "videomemlab_0_axi_periph/S00_AXI"
-        ]
-      },
-      "myManager_0_axi_periph_M00_AXI": {
+      "videomemlab_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "videomemlab_0_axi_periph/M00_AXI",
           "keyboard_subordinate_0/S00_AXI"
         ]
       },
-      "myManager_0_axi_periph_M01_AXI": {
+      "videomemlab_0_axi_periph_M01_AXI": {
         "interface_ports": [
           "videomemlab_0_axi_periph/M01_AXI",
           "vga_bram_0/S00_AXI"
+        ]
+      },
+      "videomemlab_master_0_M00_AXI": {
+        "interface_ports": [
+          "videomemlab_master_0/M00_AXI",
+          "videomemlab_0_axi_periph/S00_AXI"
         ]
       }
     },
@@ -629,27 +632,21 @@
         "ports": [
           "clk_wiz_0/clk_out1",
           "proc_sys_reset_0/slowest_sync_clk",
-          "blinky/GCLK",
-          "keyboard_subordinate_0/s00_axi_aclk",
           "videomemlab_0_axi_periph/ACLK",
           "videomemlab_0_axi_periph/S00_ACLK",
           "videomemlab_0_axi_periph/M00_ACLK",
           "videomemlab_0_axi_periph/M01_ACLK",
-          "myManager_0/m00_axi_aclk",
-          "vga_bram_0/s00_axi_aclk"
+          "blinky/GCLK",
+          "vga_bram_0/s00_axi_aclk",
+          "videomemlab_master_0/m00_axi_aclk",
+          "keyboard_subordinate_0/s00_axi_aclk"
         ]
       },
       "clk_wiz_0_clk_out2": {
         "ports": [
           "clk_wiz_0/clk_out2",
-          "keyboard_subordinate_0/i_CLK_50MHz",
-          "vga_bram_0/I_CLK_50MHz"
-        ]
-      },
-      "clk_wiz_0_clk_out3": {
-        "ports": [
-          "clk_wiz_0/clk_out3",
-          "vga_bram_0/I_CLK_125MHz"
+          "vga_bram_0/I_CLK_50",
+          "keyboard_subordinate_0/i_CLK_50MHz"
         ]
       },
       "clk_wiz_0_locked": {
@@ -661,19 +658,19 @@
       "keyboard_subordinate_0_IRQ_i": {
         "ports": [
           "keyboard_subordinate_0/IRQ_i",
-          "myManager_0/IRQ_i"
+          "videomemlab_master_0/IRQ_I"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
-          "keyboard_subordinate_0/s00_axi_aresetn",
           "videomemlab_0_axi_periph/S00_ARESETN",
           "videomemlab_0_axi_periph/M00_ARESETN",
           "videomemlab_0_axi_periph/ARESETN",
           "videomemlab_0_axi_periph/M01_ARESETN",
-          "myManager_0/m00_axi_aresetn",
-          "vga_bram_0/s00_axi_aresetn"
+          "vga_bram_0/s00_axi_aresetn",
+          "videomemlab_master_0/m00_axi_aresetn",
+          "keyboard_subordinate_0/s00_axi_aresetn"
         ]
       },
       "reset_rtl_1": {
@@ -689,52 +686,52 @@
           "clk_wiz_0/clk_in1"
         ]
       },
-      "vga_bram_0_hysync": {
+      "vga_bram_0_b": {
         "ports": [
-          "vga_bram_0/hysync",
-          "hysync"
+          "vga_bram_0/b",
+          "VGA_B"
         ]
       },
-      "vga_bram_0_vga_b": {
+      "vga_bram_0_g": {
         "ports": [
-          "vga_bram_0/vga_b",
-          "vga_b"
+          "vga_bram_0/g",
+          "VGA_G"
         ]
       },
-      "vga_bram_0_vga_g": {
+      "vga_bram_0_hsync": {
         "ports": [
-          "vga_bram_0/vga_g",
-          "vga_g"
+          "vga_bram_0/hsync",
+          "VGA_HS"
         ]
       },
-      "vga_bram_0_vga_r": {
+      "vga_bram_0_r": {
         "ports": [
-          "vga_bram_0/vga_r",
-          "vga_r"
+          "vga_bram_0/r",
+          "VGA_R"
         ]
       },
-      "vga_bram_0_vysync": {
+      "vga_bram_0_vsync": {
         "ports": [
-          "vga_bram_0/vysync",
-          "vysync"
+          "vga_bram_0/vsync",
+          "VGA_VS"
         ]
       }
     },
     "addressing": {
-      "/myManager_0": {
+      "/videomemlab_master_0": {
         "address_spaces": {
           "M00_AXI": {
             "segments": {
               "SEG_keyboard_subordinate_0_S00_AXI_reg": {
                 "address_block": "/keyboard_subordinate_0/S00_AXI/S00_AXI_reg",
-                "offset": "0x40000000",
+                "offset": "0x44A00000",
                 "range": "64K",
                 "offset_base_param": "C_S00_AXI_BASEADDR",
                 "offset_high_param": "C_S00_AXI_HIGHADDR"
               },
               "SEG_vga_bram_0_S00_AXI_reg": {
                 "address_block": "/vga_bram_0/S00_AXI/S00_AXI_reg",
-                "offset": "0x40010000",
+                "offset": "0x44A10000",
                 "range": "64K",
                 "offset_base_param": "C_S00_AXI_BASEADDR",
                 "offset_high_param": "C_S00_AXI_HIGHADDR"

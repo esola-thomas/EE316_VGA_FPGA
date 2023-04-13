@@ -130,11 +130,11 @@ architecture arch_imp of vga_bram_v1_0_S00_AXI is
         clka : IN STD_LOGIC;
         ena : IN STD_LOGIC;
         addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        douta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        douta : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
         clkb : IN STD_LOGIC;
         enb : IN STD_LOGIC;
         addrb : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+        doutb : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
   END component blk_mem_gen_0;
   
   component vga_sync is
@@ -150,10 +150,41 @@ architecture arch_imp of vga_bram_v1_0_S00_AXI is
     );
 end component vga_sync;
 
+ component bram is
+      generic (
+        WIDTHA      : integer := 8;
+        SIZEA       : integer := 38400;
+        ADDRWIDTHA  : integer := 16;
+        WIDTHB      : integer := 8;
+        SIZEB       : integer := 38400;
+        ADDRWIDTHB  : integer := 16
+        );
+      port (
+        clkA   : in  std_logic;
+        clkB   : in  std_logic;
+        enA    : in  std_logic;
+        enB    : in  std_logic;
+        weA    : in  std_logic;
+        weB    : in  std_logic;
+        addrA  : in  std_logic_vector(ADDRWIDTHA-1 downto 0);
+        addrB  : in  std_logic_vector(ADDRWIDTHB-1 downto 0);
+        diA    : in  std_logic_vector(WIDTHA-1 downto 0);
+        diB    : in  std_logic_vector(WIDTHB-1 downto 0);
+        doA    : out std_logic_vector(WIDTHA-1 downto 0);
+        doB    : out std_logic_vector(WIDTHB-1 downto 0)
+        );
+    end component;
 
 signal BRAM_ena, BRAM_enable_b, reset_h, hsync, vsync : std_logic; 
 signal BRAM_addra, BRAM_addrb : std_logic_vector(15 downto 0);
 signal vga_data : std_logic_vector(7 downto 0);
+signal I_CLK_25MHz : std_logic := '0'; 
+
+ signal bram_address : std_logic_vector(15 downto 0);
+ signal bram_data : std_logic_vector(7 downto 0);
+ signal vga_address : std_logic_vector(15 downto 0);
+ signal diB : std_logic_vector(7 downto 0);
+ signal we : std_logic;
 
 begin
 	-- I/O Connections assignments
@@ -422,30 +453,80 @@ begin
 
 
 	-- Add user logic here
-    BRAM_inst : blk_mem_gen_0 
-    port map(
-        clka => S_AXI_ACLK,
-        ena => BRAM_ena,
-        addra => BRAM_addra,
-        clkb => S_AXI_ACLK,
-        enb => BRAM_enable_b,
-        addrb => BRAM_addrb
-        ); 
-    -- BRAM_ena BRAM_addra BRAM_enable_b BRAM_addrb reset_h vga_data
+-- Old
+--    BRAM_inst : blk_mem_gen_0 
+--    port map(
+--        clka => S_AXI_ACLK,
+--        ena => BRAM_ena,
+--        addra => BRAM_addra,
+--        clkb => S_AXI_ACLK,
+--        enb => BRAM_enable_b,
+--        addrb => BRAM_addrb); 
+
+-- NEw
+--    BRAM_inst : blk_mem_gen_0 
+--    port map(
+--        clka => I_CLK_125MHz,
+--        ena => '1',
+--        addra => BRAM_addra,
+--        douta => open,
+--        clkb => I_CLK_125MHz,
+--        enb => '1',
+--        addrb => BRAM_addrb,
+--        doutb => vga_data); 
+
     reset_h <= not S_AXI_ARESETN;
-   vga_sync_inst : vga_sync
-   port map(
-      clk => S_AXI_ACLK, 
-      reset => reset_h,
-      hsync => hsync, 
-      vsync => vsync,
-      I_CLK_50MHz => I_CLK_50MHz, 
-      vga_address => BRAM_addrb,
-      vga_data => vga_data,
-      vga_r => vga_r,
-      vga_g => vga_g,
-      vga_b => vga_b
-    );
+    
+    clk_25_generate : process(I_CLK_50MHz) begin
+        if (rising_edge(I_CLK_50MHz)) then
+            I_CLK_25MHz <= not I_CLK_25MHz;
+        end if;
+    end process clk_25_generate;
+    
+--   vga_sync_inst : vga_sync
+--   port map(
+--      clk => I_CLK_50MHz, 
+--      reset => reset_h,
+--      hsync => hsync, 
+--      vsync => vsync,
+--      I_CLK_50MHz => I_CLK_50MHz, 
+--      vga_address => BRAM_addrb,
+--      vga_data => vga_data,
+--      vga_r => vga_r,
+--      vga_g => vga_g,
+--      vga_b => vga_b
+--    );
+
+    Inst_vga : vga_sync
+        port map(
+            --clk => S_AXI_ACLK,
+            clk => I_CLK_50MHz,
+            I_CLK_50MHz => I_CLK_50MHz,
+            reset => reset_h,
+            hsync => hsync,
+            vsync => vsync,
+            vga_address => vga_address,
+            vga_data => vga_data,
+            vga_r => vga_r,
+            vga_g => vga_g,
+            vga_b => vga_b
+        );
+    
+     Inst_bram_0 : bram
+        port map(
+            clkA => S_AXI_ACLK,
+            clkB => S_AXI_ACLK,
+            enA => '1',
+            enB => '1',
+            weA => we,
+            weB => '0',
+            addrA => bram_address,
+            addrB => vga_address,
+            diA => bram_data,
+            diB => diB,
+            doA => open,
+            doB => vga_data
+        );
 	-- User logic ends 
 
 end arch_imp;

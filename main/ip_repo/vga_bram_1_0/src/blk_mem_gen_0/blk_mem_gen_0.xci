@@ -2,9 +2,10 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blk_mem_gen_0",
+    "cell_name": "vga_bram_v1_0_S00_AXI_inst/BRAM_inst",
     "component_reference": "xilinx.com:ip:blk_mem_gen:8.4",
     "ip_revision": "5",
-    "gen_directory": ".",
+    "gen_directory": "../../../../Vivado_2022.2/EE316_VGA_FPGA.tmp/vga_bram_v1_0_project/vga_bram_v1_0_project.gen/sources_1/ip/blk_mem_gen_0",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "blk_mem_gen_0", "resolve_type": "user", "usage": "all" } ],
@@ -32,13 +33,13 @@
         "Algorithm": [ { "value": "Minimum_Area", "resolve_type": "user", "usage": "all" } ],
         "Primitive": [ { "value": "8kx2", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "Assume_Synchronous_Clk": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "Write_Width_A": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Write_Width_A": [ { "value": "8", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Write_Depth_A": [ { "value": "38400", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "Read_Width_A": [ { "value": "32", "resolve_type": "user", "enabled": false, "usage": "all" } ],
+        "Read_Width_A": [ { "value": "8", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "Operating_Mode_A": [ { "value": "WRITE_FIRST", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "Enable_A": [ { "value": "Use_ENA_Pin", "resolve_type": "user", "usage": "all" } ],
-        "Write_Width_B": [ { "value": "32", "resolve_type": "user", "usage": "all" } ],
-        "Read_Width_B": [ { "value": "32", "resolve_type": "user", "usage": "all" } ],
+        "Write_Width_B": [ { "value": "8", "resolve_type": "user", "usage": "all" } ],
+        "Read_Width_B": [ { "value": "8", "resolve_type": "user", "usage": "all" } ],
         "Operating_Mode_B": [ { "value": "WRITE_FIRST", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "Enable_B": [ { "value": "Use_ENB_Pin", "resolve_type": "user", "usage": "all" } ],
         "Register_PortA_Output_of_Memory_Primitives": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
@@ -110,8 +111,8 @@
         "C_USE_BYTE_WEA": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_WEA_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_WRITE_MODE_A": [ { "value": "WRITE_FIRST", "resolve_type": "generated", "usage": "all" } ],
-        "C_WRITE_WIDTH_A": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_READ_WIDTH_A": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_WRITE_WIDTH_A": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_READ_WIDTH_A": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_WRITE_DEPTH_A": [ { "value": "38400", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_READ_DEPTH_A": [ { "value": "38400", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_ADDRA_WIDTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -124,8 +125,8 @@
         "C_USE_BYTE_WEB": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_WEB_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_WRITE_MODE_B": [ { "value": "WRITE_FIRST", "resolve_type": "generated", "usage": "all" } ],
-        "C_WRITE_WIDTH_B": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_READ_WIDTH_B": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_WRITE_WIDTH_B": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_READ_WIDTH_B": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_WRITE_DEPTH_B": [ { "value": "38400", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_READ_DEPTH_B": [ { "value": "38400", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_ADDRB_WIDTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -153,9 +154,9 @@
         "C_EN_SHUTDOWN_PIN": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_EN_SAFETY_CKT": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_DISABLE_WARN_BHV_RANGE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_COUNT_36K_BRAM": [ { "value": "34", "resolve_type": "generated", "usage": "all" } ],
-        "C_COUNT_18K_BRAM": [ { "value": "2", "resolve_type": "generated", "usage": "all" } ],
-        "C_EST_POWER_SUMMARY": [ { "value": "Estimated Power for IP     :     33.766244 mW", "resolve_type": "generated", "usage": "all" } ]
+        "C_COUNT_36K_BRAM": [ { "value": "9", "resolve_type": "generated", "usage": "all" } ],
+        "C_COUNT_18K_BRAM": [ { "value": "1", "resolve_type": "generated", "usage": "all" } ],
+        "C_EST_POWER_SUMMARY": [ { "value": "Estimated Power for IP     :     4.564255 mW", "resolve_type": "generated", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -176,7 +177,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "5" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "." } ],
+        "OUTPUTDIR": [ { "value": "../../../../Vivado_2022.2/EE316_VGA_FPGA.tmp/vga_bram_v1_0_project/vga_bram_v1_0_project.gen/sources_1/ip/blk_mem_gen_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2022.2" } ],
@@ -188,11 +189,11 @@
         "clka": [ { "direction": "in", "driver_value": "0" } ],
         "ena": [ { "direction": "in", "driver_value": "0" } ],
         "addra": [ { "direction": "in", "size_left": "15", "size_right": "0", "driver_value": "0" } ],
-        "douta": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "douta": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
         "clkb": [ { "direction": "in", "driver_value": "0" } ],
         "enb": [ { "direction": "in", "driver_value": "0" } ],
         "addrb": [ { "direction": "in", "size_left": "15", "size_right": "0", "driver_value": "0" } ],
-        "doutb": [ { "direction": "out", "size_left": "31", "size_right": "0" } ]
+        "doutb": [ { "direction": "out", "size_left": "7", "size_right": "0" } ]
       },
       "interfaces": {
         "CLK.ACLK": {

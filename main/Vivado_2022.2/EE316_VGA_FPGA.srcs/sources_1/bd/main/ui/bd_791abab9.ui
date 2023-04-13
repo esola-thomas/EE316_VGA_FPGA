@@ -1,52 +1,51 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.07043",
-   "Default View_TopLeft":"566,220",
+   "Default View_ScaleFactor":"0.658928",
+   "Default View_TopLeft":"-121,-111",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_reset_rtl -pg 1 -lvl 0 -x -40 -y 330 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x -40 -y 350 -defaultsOSRD
-preplace port port-id_PS2_CLK -pg 1 -lvl 0 -x -40 -y 180 -defaultsOSRD
-preplace port port-id_PS2_DATA -pg 1 -lvl 0 -x -40 -y 200 -defaultsOSRD
-preplace port port-id_vysync -pg 1 -lvl 6 -x 1510 -y 530 -defaultsOSRD
-preplace port port-id_hysync -pg 1 -lvl 6 -x 1510 -y 510 -defaultsOSRD
-preplace portBus RGB_LEDs -pg 1 -lvl 6 -x 1510 -y 60 -defaultsOSRD
-preplace portBus vga_b -pg 1 -lvl 6 -x 1510 -y 590 -defaultsOSRD
-preplace portBus vga_g -pg 1 -lvl 6 -x 1510 -y 570 -defaultsOSRD
-preplace portBus vga_r -pg 1 -lvl 6 -x 1510 -y 550 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 380 -y 450 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 80 -y 340 -defaultsOSRD
-preplace inst blinky -pg 1 -lvl 5 -x 1360 -y 60 -defaultsOSRD
-preplace inst keyboard_subordinate_0 -pg 1 -lvl 5 -x 1360 -y 210 -defaultsOSRD
-preplace inst videomemlab_0_axi_periph -pg 1 -lvl 4 -x 1020 -y 500 -defaultsOSRD
-preplace inst myManager_0 -pg 1 -lvl 3 -x 720 -y 420 -defaultsOSRD
-preplace inst vga_bram_0 -pg 1 -lvl 5 -x 1360 -y 550 -defaultsOSRD
-preplace netloc PS2_CLK_1 1 0 5 NJ 180 NJ 180 NJ 180 NJ 180 NJ
-preplace netloc PS2_DATA_1 1 0 5 NJ 200 NJ 200 NJ 200 NJ 200 NJ
+preplace port port-id_reset_rtl -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port port-id_PS2_CLK -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port port-id_PS2_DATA -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_VGA_VS -pg 1 -lvl 6 -x 1530 -y 180 -defaultsOSRD
+preplace port port-id_VGA_HS -pg 1 -lvl 6 -x 1530 -y 160 -defaultsOSRD
+preplace portBus RGB_LEDs -pg 1 -lvl 6 -x 1530 -y 60 -defaultsOSRD
+preplace portBus VGA_B -pg 1 -lvl 6 -x 1530 -y 240 -defaultsOSRD
+preplace portBus VGA_G -pg 1 -lvl 6 -x 1530 -y 220 -defaultsOSRD
+preplace portBus VGA_R -pg 1 -lvl 6 -x 1530 -y 200 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 420 -y 270 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 120 -y 280 -defaultsOSRD
+preplace inst blinky -pg 1 -lvl 5 -x 1390 -y 60 -defaultsOSRD
+preplace inst videomemlab_0_axi_periph -pg 1 -lvl 4 -x 1070 -y 350 -defaultsOSRD
+preplace inst vga_bram_0 -pg 1 -lvl 5 -x 1390 -y 200 -defaultsOSRD
+preplace inst videomemlab_master_0 -pg 1 -lvl 3 -x 760 -y 270 -defaultsOSRD
+preplace inst keyboard_subordinate_0 -pg 1 -lvl 5 -x 1390 -y 390 -defaultsOSRD
 preplace netloc blinky_0_LD0 1 5 1 NJ 60
-preplace netloc clk_wiz_0_clk_out1 1 1 4 190 320 570 320 860 320 1180
-preplace netloc clk_wiz_0_clk_out2 1 1 4 NJ 330 NJ 330 NJ 330 1210
-preplace netloc clk_wiz_0_clk_out3 1 1 4 NJ 350 560J 310 NJ 310 1190
-preplace netloc clk_wiz_0_locked 1 1 1 180 370n
-preplace netloc keyboard_subordinate_0_IRQ_i 1 2 4 580 340 NJ 340 NJ 340 1490
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 3 570 500 870 360 1200
-preplace netloc reset_rtl_1 1 0 2 -20 430 NJ
-preplace netloc sys_clock_1 1 0 1 NJ 350
-preplace netloc vga_bram_0_hysync 1 5 1 NJ 510
-preplace netloc vga_bram_0_vga_b 1 5 1 NJ 590
-preplace netloc vga_bram_0_vga_g 1 5 1 NJ 570
-preplace netloc vga_bram_0_vga_r 1 5 1 NJ 550
-preplace netloc vga_bram_0_vysync 1 5 1 NJ 530
-preplace netloc myManager_0_M00_AXI 1 3 1 N 420
-preplace netloc myManager_0_axi_periph_M00_AXI 1 4 1 1170 160n
-preplace netloc myManager_0_axi_periph_M01_AXI 1 4 1 N 510
-levelinfo -pg 1 -40 80 380 720 1020 1360 1510
-pagesize -pg 1 -db -bbox -sgen -170 0 1670 1030
+preplace netloc clk_wiz_0_clk_out1 1 1 4 220 170 600 190 910 190 1240
+preplace netloc clk_wiz_0_clk_out2 1 1 4 220 370 NJ 370 900J 210 1270
+preplace netloc clk_wiz_0_locked 1 1 1 N 310
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 3 600 350 920 490 1260
+preplace netloc reset_rtl_1 1 0 2 20 190 230J
+preplace netloc sys_clock_1 1 0 1 NJ 290
+preplace netloc vga_bram_0_hsync 1 5 1 NJ 160
+preplace netloc vga_bram_0_vsync 1 5 1 NJ 180
+preplace netloc vga_bram_0_r 1 5 1 NJ 200
+preplace netloc vga_bram_0_g 1 5 1 NJ 220
+preplace netloc vga_bram_0_b 1 5 1 NJ 240
+preplace netloc PS2_CLK_1 1 0 5 NJ 130 NJ 130 NJ 130 NJ 130 1250J
+preplace netloc PS2_DATA_1 1 0 5 NJ 150 NJ 150 NJ 150 NJ 150 1230J
+preplace netloc keyboard_subordinate_0_IRQ_i 1 2 4 610 500 NJ 500 NJ 500 1510
+preplace netloc videomemlab_0_axi_periph_M01_AXI 1 4 1 1220 170n
+preplace netloc videomemlab_master_0_M00_AXI 1 3 1 N 270
+preplace netloc videomemlab_0_axi_periph_M00_AXI 1 4 1 N 340
+levelinfo -pg 1 0 120 420 760 1070 1390 1530
+pagesize -pg 1 -db -bbox -sgen -130 0 1690 510
 "
 }
 {
-   "da_axi4_cnt":"3",
+   "da_axi4_cnt":"9",
    "da_board_cnt":"2",
    "da_clkrst_cnt":"1"
 }

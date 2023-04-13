@@ -27,7 +27,11 @@ set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { VGA_G[
 set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33 } [get_ports { VGA_G[1] }]; #IO_L8N_T1_34 Sch=jb_n[1]
 set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { VGA_G[2] }]; #IO_L1P_T0_34 Sch=jb_p[2]
 set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { VGA_G[3] }]; #IO_L1N_T0_34 Sch=jb_n[2]
-set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { VGA_HS_O }]; #IO_L18P_T2_34 Sch=jb_p[3]
-set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { VGA_VS_O }]; #IO_L18N_T2_34 Sch=jb_n[3]
+set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { VGA_HS }]; #IO_L18P_T2_34 Sch=jb_p[3]
+set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { VGA_VS }]; #IO_L18N_T2_34 Sch=jb_n[3]
+
+# PS2 Connections
+set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS33 } [get_ports { PS2_DATA }]; #IO_L11P_T1_SRCC_34 Sch=ck_io[0]
+set_property -dict { PACKAGE_PIN V13   IOSTANDARD LVCMOS33 } [get_ports { PS2_CLK }]; #IO_L3N_T0_DQS_34 Sch=ck_io[1]
 
 set_property -dict { PACKAGE_PIN D20   IOSTANDARD LVCMOS33 } [get_ports { reset_rtl }]; #IO_L4N_T0_35 Sch=btn[0]

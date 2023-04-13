@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 // Date        : Fri Apr  7 21:39:42 2023
 // Host        : eniac-solathomas running 64-bit Red Hat Enterprise Linux release 8.7 (Ootpa)
-// Command     : write_verilog -force -mode funcsim
-//               /repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_blinky_0_1/main_blinky_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top main_blinky_0_1 -prefix
+//               main_blinky_0_1_ main_blinky_0_1_sim_netlist.v
 // Design      : main_blinky_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,33 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "main_blinky_0_1,blinky,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "blinky,Vivado 2022.2" *) 
-(* NotValidForBitStream *)
-module main_blinky_0_1
-   (GCLK,
-    LD0);
-  input GCLK;
-  output [5:0]LD0;
-
-  wire \<const0> ;
-  wire GCLK;
-  wire [5:0]\^LD0 ;
-
-  assign LD0[5] = \^LD0 [5];
-  assign LD0[4] = \^LD0 [2];
-  assign LD0[3] = \<const0> ;
-  assign LD0[2] = \^LD0 [2];
-  assign LD0[1] = \^LD0 [2];
-  assign LD0[0] = \^LD0 [0];
-  GND GND
-       (.G(\<const0> ));
-  main_blinky_0_1_blinky U0
-       (.GCLK(GCLK),
-        .LD0({\^LD0 [5],\^LD0 [2],\^LD0 [0]}));
-endmodule
-
-(* ORIG_REF_NAME = "blinky" *) 
 module main_blinky_0_1_blinky
    (LD0,
     GCLK);
@@ -844,6 +817,32 @@ module main_blinky_0_1_blinky
        (.I0(count_reg[8]),
         .I1(count_reg[9]),
         .O(i__carry_i_7_n_0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "main_blinky_0_1,blinky,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "blinky,Vivado 2022.2" *) 
+(* NotValidForBitStream *)
+module main_blinky_0_1
+   (GCLK,
+    LD0);
+  input GCLK;
+  output [5:0]LD0;
+
+  wire \<const0> ;
+  wire GCLK;
+  wire [5:0]\^LD0 ;
+
+  assign LD0[5] = \^LD0 [5];
+  assign LD0[4] = \^LD0 [2];
+  assign LD0[3] = \<const0> ;
+  assign LD0[2] = \^LD0 [2];
+  assign LD0[1] = \^LD0 [2];
+  assign LD0[0] = \^LD0 [0];
+  GND GND
+       (.G(\<const0> ));
+  main_blinky_0_1_blinky U0
+       (.GCLK(GCLK),
+        .LD0({\^LD0 [5],\^LD0 [2],\^LD0 [0]}));
 endmodule
 `ifndef GLBL
 `define GLBL

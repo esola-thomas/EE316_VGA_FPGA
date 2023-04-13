@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Tue Apr 11 15:11:22 2023
+-- Date        : Tue Apr 11 12:40:16 2023
 -- Host        : eniac-solathomas running 64-bit Red Hat Enterprise Linux release 8.7 (Ootpa)
--- Command     : write_vhdl -force -mode funcsim
---               /repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_xbar_0/main_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_xbar_0 -prefix
+--               main_xbar_0_ main_xbar_0_sim_netlist.vhdl
 -- Design      : main_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -72,8 +72,6 @@ entity main_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd is
     \gen_no_arbiter.m_valid_i_reg_1\ : in STD_LOGIC;
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_28_addr_arbiter_sasd";
 end main_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd;
 
 architecture STRUCTURE of main_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd is
@@ -1060,18 +1058,18 @@ begin
     );
 \m_atarget_hot[2]_i_3\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0001"
+      INIT => X"0400"
     )
         port map (
-      I0 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(23),
-      I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(22),
-      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(21),
-      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(20),
+      I0 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(22),
+      I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(23),
+      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(20),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(21),
       O => \m_atarget_hot[2]_i_3_n_0\
     );
 \m_atarget_hot[2]_i_4\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0001"
+      INIT => X"0004"
     )
         port map (
       I0 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(27),
@@ -1417,8 +1415,6 @@ entity main_xbar_0_axi_crossbar_v2_1_28_decerr_slave is
     \gen_axilite.s_axi_bvalid_i_reg_1\ : in STD_LOGIC;
     aa_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_xbar_0_axi_crossbar_v2_1_28_decerr_slave : entity is "axi_crossbar_v2_1_28_decerr_slave";
 end main_xbar_0_axi_crossbar_v2_1_28_decerr_slave;
 
 architecture STRUCTURE of main_xbar_0_axi_crossbar_v2_1_28_decerr_slave is
@@ -1594,8 +1590,6 @@ entity main_xbar_0_axi_crossbar_v2_1_28_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_xbar_0_axi_crossbar_v2_1_28_splitter : entity is "axi_crossbar_v2_1_28_splitter";
 end main_xbar_0_axi_crossbar_v2_1_28_splitter;
 
 architecture STRUCTURE of main_xbar_0_axi_crossbar_v2_1_28_splitter is
@@ -1795,8 +1789,6 @@ entity main_xbar_0_axi_register_slice_v2_1_27_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_xbar_0_axi_register_slice_v2_1_27_axic_register_slice : entity is "axi_register_slice_v2_1_27_axic_register_slice";
 end main_xbar_0_axi_register_slice_v2_1_27_axic_register_slice;
 
 architecture STRUCTURE of main_xbar_0_axi_register_slice_v2_1_27_axic_register_slice is
@@ -2974,8 +2966,6 @@ entity main_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd : entity is "axi_crossbar_v2_1_28_crossbar_sasd";
 end main_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd;
 
 architecture STRUCTURE of main_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd is
@@ -3361,7 +3351,7 @@ entity main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar is
   attribute C_M_AXI_ADDR_WIDTH : string;
   attribute C_M_AXI_ADDR_WIDTH of main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "64'b0000000000000000000000000001000000000000000000000000000000010000";
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "128'b00000000000000000000000000000000010000000000000100000000000000000000000000000000000000000000000001000000000000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "128'b00000000000000000000000000000000010001001010000100000000000000000000000000000000000000000000000001000100101000000000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : string;
   attribute C_M_AXI_READ_CONNECTIVITY of main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "64'b1111111111111111111111111111111111111111111111111111111111111111";
   attribute C_M_AXI_READ_ISSUING : string;
@@ -3394,8 +3384,6 @@ entity main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "axi_crossbar_v2_1_28_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of main_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;
@@ -3739,7 +3727,7 @@ architecture STRUCTURE of main_xbar_0 is
   attribute C_M_AXI_ADDR_WIDTH : string;
   attribute C_M_AXI_ADDR_WIDTH of inst : label is "64'b0000000000000000000000000001000000000000000000000000000000010000";
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of inst : label is "128'b00000000000000000000000000000000010000000000000100000000000000000000000000000000000000000000000001000000000000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of inst : label is "128'b00000000000000000000000000000000010001001010000100000000000000000000000000000000000000000000000001000100101000000000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : string;
   attribute C_M_AXI_READ_CONNECTIVITY of inst : label is "64'b1111111111111111111111111111111111111111111111111111111111111111";
   attribute C_M_AXI_READ_ISSUING : string;

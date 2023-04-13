@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 -- Date        : Fri Apr  7 21:39:42 2023
 -- Host        : eniac-solathomas running 64-bit Red Hat Enterprise Linux release 8.7 (Ootpa)
--- Command     : write_vhdl -force -mode funcsim
---               /repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_blinky_0_1/main_blinky_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_blinky_0_1 -prefix
+--               main_blinky_0_1_ main_blinky_0_1_sim_netlist.vhdl
 -- Design      : main_blinky_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity main_blinky_0_1_blinky is
     LD0 : out STD_LOGIC_VECTOR ( 2 downto 0 );
     GCLK : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_blinky_0_1_blinky : entity is "blinky";
 end main_blinky_0_1_blinky;
 
 architecture STRUCTURE of main_blinky_0_1_blinky is

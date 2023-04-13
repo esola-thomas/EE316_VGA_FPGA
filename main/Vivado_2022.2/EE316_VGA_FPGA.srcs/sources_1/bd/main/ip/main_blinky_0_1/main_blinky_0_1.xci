@@ -8,7 +8,7 @@
     "gen_directory": "../../../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_blinky_0_1",
     "parameters": {
       "component_parameters": {
-        "clk_freq": [ { "value": "100000000", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "clk_freq": [ { "value": "100000000", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "out_size": [ { "value": "6", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "out_off_mask": [ { "value": "0x00000021", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "out_on_mask": [ { "value": "0x00000017", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],

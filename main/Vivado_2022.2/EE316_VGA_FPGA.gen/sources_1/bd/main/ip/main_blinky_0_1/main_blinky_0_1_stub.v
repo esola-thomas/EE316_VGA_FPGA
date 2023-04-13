@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 // Date        : Fri Apr  7 21:39:42 2023
 // Host        : eniac-solathomas running 64-bit Red Hat Enterprise Linux release 8.7 (Ootpa)
-// Command     : write_verilog -force -mode synth_stub
-//               /repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_blinky_0_1/main_blinky_0_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top main_blinky_0_1 -prefix
+//               main_blinky_0_1_ main_blinky_0_1_stub.v
 // Design      : main_blinky_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z007sclg400-1

@@ -123,7 +123,7 @@ constant H_POL : std_logic := '1';
 constant V_POL : std_logic := '1';
 
 --Moving Box constants
-constant BOX_WIDTH : natural := 8;
+constant BOX_WIDTH : natural := 250;
 constant BOX_CLK_DIV : natural := 1000000; --MAX=(2^25 - 1)
 
 constant BOX_X_MAX : natural := (512 - BOX_WIDTH);
