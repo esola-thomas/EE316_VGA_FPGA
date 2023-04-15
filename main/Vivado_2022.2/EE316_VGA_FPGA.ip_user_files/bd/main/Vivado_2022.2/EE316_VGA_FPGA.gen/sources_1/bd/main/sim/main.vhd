@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
---Date        : Thu Apr 13 15:32:28 2023
+--Date        : Fri Apr 14 15:30:10 2023
 --Host        : eniac-solathomas running 64-bit Red Hat Enterprise Linux release 8.7 (Ootpa)
 --Command     : generate_target main.bd
 --Design      : main
@@ -851,7 +851,7 @@ entity main is
     sys_clock : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of main : entity is "main,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=11,numReposBlks=7,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of main : entity is "main,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=11,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,da_board_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of main : entity is "main.hwdef";
 end main;
@@ -918,9 +918,40 @@ architecture STRUCTURE of main is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component main_vga_bram_0_5;
+  component main_keyboard_subordinate_1_1 is
+  port (
+    I_CLK_50 : in STD_LOGIC;
+    ps2_clk : in STD_LOGIC;
+    ps2_data : in STD_LOGIC;
+    IRQ_O : out STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component main_keyboard_subordinate_1_1;
   component main_videomemlab_master_0_1 is
   port (
     IRQ_I : in STD_LOGIC;
+    m00_axi_aclk : in STD_LOGIC;
+    m00_axi_aresetn : in STD_LOGIC;
     m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m00_axi_awvalid : out STD_LOGIC;
@@ -939,47 +970,16 @@ architecture STRUCTURE of main is
     m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m00_axi_rvalid : in STD_LOGIC;
-    m00_axi_rready : out STD_LOGIC;
-    m00_axi_aclk : in STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC
+    m00_axi_rready : out STD_LOGIC
   );
   end component main_videomemlab_master_0_1;
-  component main_keyboard_subordinate_0_6 is
-  port (
-    PS2_CLK : in STD_LOGIC;
-    PS2_DATA : in STD_LOGIC;
-    i_CLK_50MHz : in STD_LOGIC;
-    IRQ_i : out STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC
-  );
-  end component main_keyboard_subordinate_0_6;
   signal PS2_CLK_1 : STD_LOGIC;
   signal PS2_DATA_1 : STD_LOGIC;
   signal blinky_0_LD0 : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal clk_wiz_0_clk_out2 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
-  signal keyboard_subordinate_0_IRQ_i : STD_LOGIC;
+  signal keyboard_subordinate_1_IRQ_O : STD_LOGIC;
   signal proc_sys_reset_0_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal reset_rtl_1 : STD_LOGIC;
   signal sys_clock_1 : STD_LOGIC;
@@ -1081,19 +1081,19 @@ clk_wiz_0: component main_clk_wiz_0_1
       locked => clk_wiz_0_locked,
       reset => reset_rtl_1
     );
-keyboard_subordinate_0: component main_keyboard_subordinate_0_6
+keyboard_subordinate_1: component main_keyboard_subordinate_1_1
      port map (
-      IRQ_i => keyboard_subordinate_0_IRQ_i,
-      PS2_CLK => PS2_CLK_1,
-      PS2_DATA => PS2_DATA_1,
-      i_CLK_50MHz => clk_wiz_0_clk_out2,
+      IRQ_O => keyboard_subordinate_1_IRQ_O,
+      I_CLK_50 => clk_wiz_0_clk_out2,
+      ps2_clk => PS2_CLK_1,
+      ps2_data => PS2_DATA_1,
       s00_axi_aclk => clk_wiz_0_clk_out1,
-      s00_axi_araddr(3 downto 0) => videomemlab_0_axi_periph_M00_AXI_ARADDR(3 downto 0),
+      s00_axi_araddr(31 downto 0) => videomemlab_0_axi_periph_M00_AXI_ARADDR(31 downto 0),
       s00_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
       s00_axi_arprot(2 downto 0) => videomemlab_0_axi_periph_M00_AXI_ARPROT(2 downto 0),
       s00_axi_arready => videomemlab_0_axi_periph_M00_AXI_ARREADY,
       s00_axi_arvalid => videomemlab_0_axi_periph_M00_AXI_ARVALID,
-      s00_axi_awaddr(3 downto 0) => videomemlab_0_axi_periph_M00_AXI_AWADDR(3 downto 0),
+      s00_axi_awaddr(31 downto 0) => videomemlab_0_axi_periph_M00_AXI_AWADDR(31 downto 0),
       s00_axi_awprot(2 downto 0) => videomemlab_0_axi_periph_M00_AXI_AWPROT(2 downto 0),
       s00_axi_awready => videomemlab_0_axi_periph_M00_AXI_AWREADY,
       s00_axi_awvalid => videomemlab_0_axi_periph_M00_AXI_AWVALID,
@@ -1222,7 +1222,7 @@ videomemlab_0_axi_periph: entity work.main_myManager_0_axi_periph_0
     );
 videomemlab_master_0: component main_videomemlab_master_0_1
      port map (
-      IRQ_I => keyboard_subordinate_0_IRQ_i,
+      IRQ_I => keyboard_subordinate_1_IRQ_O,
       m00_axi_aclk => clk_wiz_0_clk_out1,
       m00_axi_araddr(31 downto 0) => videomemlab_master_0_M00_AXI_ARADDR(31 downto 0),
       m00_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),

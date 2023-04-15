@@ -8,16 +8,16 @@ vhdl xil_defaultlib  \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/be08/hdl/vga_bram_v1_0_S00_AXI.vhd" \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/be08/hdl/vga_bram_v1_0.vhd" \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_vga_bram_0_5/sim/main_vga_bram_0_5.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/91a5/src/char8x12_lookup_table.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/91a5/src/scancode2ascii.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/91a5/hdl/videomemlab_master_v1_0_M00_AXI.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/91a5/hdl/videomemlab_master_v1_0.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/785f/src/char8x12_lookup_table.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/785f/src/scancode2ascii.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/785f/hdl/videomemlab_master_v1_0_M00_AXI.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/785f/hdl/videomemlab_master_v1_0.vhd" \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_videomemlab_master_0_1/sim/main_videomemlab_master_0_1.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/21cd/src/debounce.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/21cd/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/21cd/src/ps2_keyboard.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/21cd/hdl/keyboard_subordinate_v1_0.vhd" \
-"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_keyboard_subordinate_0_6/sim/main_keyboard_subordinate_0_6.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/f54d/src/debounce.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/f54d/src/ps2_keyboard.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ipshared/f54d/hdl/keyboard_subordinate_v1_0.vhd" \
+"../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_keyboard_subordinate_1_1/sim/main_keyboard_subordinate_1_1.vhd" \
 "../../../../EE316_VGA_FPGA.gen/sources_1/bd/main/sim/main.vhd" \
 
 nosort

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:videomemlab_master:1.0
--- IP Revision: 26
+-- IP Revision: 27
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -56,6 +56,8 @@ USE ieee.numeric_std.ALL;
 ENTITY main_videomemlab_master_0_1 IS
   PORT (
     IRQ_I : IN STD_LOGIC;
+    m00_axi_aclk : IN STD_LOGIC;
+    m00_axi_aresetn : IN STD_LOGIC;
     m00_axi_awaddr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m00_axi_awprot : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
     m00_axi_awvalid : OUT STD_LOGIC;
@@ -74,9 +76,7 @@ ENTITY main_videomemlab_master_0_1 IS
     m00_axi_rdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     m00_axi_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     m00_axi_rvalid : IN STD_LOGIC;
-    m00_axi_rready : OUT STD_LOGIC;
-    m00_axi_aclk : IN STD_LOGIC;
-    m00_axi_aresetn : IN STD_LOGIC
+    m00_axi_rready : OUT STD_LOGIC
   );
 END main_videomemlab_master_0_1;
 
@@ -89,10 +89,14 @@ ARCHITECTURE main_videomemlab_master_0_1_arch OF main_videomemlab_master_0_1 IS
       C_M00_AXI_TARGET_SLAVE_BASE_ADDR : STD_LOGIC_VECTOR;
       C_M00_AXI_ADDR_WIDTH : INTEGER;
       C_M00_AXI_DATA_WIDTH : INTEGER;
-      C_M00_AXI_TRANSACTIONS_NUM : INTEGER
+      C_M00_AXI_TRANSACTIONS_NUM : INTEGER;
+      C_M_PS2_SLAVE_BASE_ADDR : STD_LOGIC_VECTOR;
+      C_M_VIDEOMEM_BASE_ADDR : STD_LOGIC_VECTOR
     );
     PORT (
       IRQ_I : IN STD_LOGIC;
+      m00_axi_aclk : IN STD_LOGIC;
+      m00_axi_aresetn : IN STD_LOGIC;
       m00_axi_awaddr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       m00_axi_awprot : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
       m00_axi_awvalid : OUT STD_LOGIC;
@@ -111,9 +115,7 @@ ARCHITECTURE main_videomemlab_master_0_1_arch OF main_videomemlab_master_0_1 IS
       m00_axi_rdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       m00_axi_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       m00_axi_rvalid : IN STD_LOGIC;
-      m00_axi_rready : OUT STD_LOGIC;
-      m00_axi_aclk : IN STD_LOGIC;
-      m00_axi_aresetn : IN STD_LOGIC
+      m00_axi_rready : OUT STD_LOGIC
     );
   END COMPONENT videomemlab_master_v1_0;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -150,10 +152,14 @@ BEGIN
       C_M00_AXI_TARGET_SLAVE_BASE_ADDR => X"40000000",
       C_M00_AXI_ADDR_WIDTH => 32,
       C_M00_AXI_DATA_WIDTH => 32,
-      C_M00_AXI_TRANSACTIONS_NUM => 4
+      C_M00_AXI_TRANSACTIONS_NUM => 4,
+      C_M_PS2_SLAVE_BASE_ADDR => X"44A00000",
+      C_M_VIDEOMEM_BASE_ADDR => X"44A10000"
     )
     PORT MAP (
       IRQ_I => IRQ_I,
+      m00_axi_aclk => m00_axi_aclk,
+      m00_axi_aresetn => m00_axi_aresetn,
       m00_axi_awaddr => m00_axi_awaddr,
       m00_axi_awprot => m00_axi_awprot,
       m00_axi_awvalid => m00_axi_awvalid,
@@ -172,8 +178,6 @@ BEGIN
       m00_axi_rdata => m00_axi_rdata,
       m00_axi_rresp => m00_axi_rresp,
       m00_axi_rvalid => m00_axi_rvalid,
-      m00_axi_rready => m00_axi_rready,
-      m00_axi_aclk => m00_axi_aclk,
-      m00_axi_aresetn => m00_axi_aresetn
+      m00_axi_rready => m00_axi_rready
     );
 END main_videomemlab_master_0_1_arch;

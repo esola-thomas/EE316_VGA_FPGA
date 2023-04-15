@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Thu Apr 13 14:52:40 2023
+-- Date        : Fri Apr 14 15:30:33 2023
 -- Host        : eniac-solathomas running 64-bit Red Hat Enterprise Linux release 8.7 (Ootpa)
--- Command     : write_vhdl -force -mode funcsim
---               /repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_videomemlab_master_0_1/main_videomemlab_master_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_videomemlab_master_0_1 -prefix
+--               main_videomemlab_master_0_1_ main_videomemlab_master_0_1_sim_netlist.vhdl
 -- Design      : main_videomemlab_master_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity main_videomemlab_master_0_1_char8x12_lookup_table is
     \reg_pixels_reg[0]\ : in STD_LOGIC;
     m00_axi_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_videomemlab_master_0_1_char8x12_lookup_table : entity is "char8x12_lookup_table";
 end main_videomemlab_master_0_1_char8x12_lookup_table;
 
 architecture STRUCTURE of main_videomemlab_master_0_1_char8x12_lookup_table is
@@ -461,8 +459,6 @@ entity main_videomemlab_master_0_1_scancode2ascii is
     \code_reg[1]_4\ : out STD_LOGIC;
     sel0 : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_videomemlab_master_0_1_scancode2ascii : entity is "scancode2ascii";
 end main_videomemlab_master_0_1_scancode2ascii;
 
 architecture STRUCTURE of main_videomemlab_master_0_1_scancode2ascii is
@@ -1117,8 +1113,6 @@ entity main_videomemlab_master_0_1_videomemlab_master_v1_0_M00_AXI is
     m00_axi_awready : in STD_LOGIC;
     m00_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_videomemlab_master_0_1_videomemlab_master_v1_0_M00_AXI : entity is "videomemlab_master_v1_0_M00_AXI";
 end main_videomemlab_master_0_1_videomemlab_master_v1_0_M00_AXI;
 
 architecture STRUCTURE of main_videomemlab_master_0_1_videomemlab_master_v1_0_M00_AXI is
@@ -6300,8 +6294,6 @@ entity main_videomemlab_master_0_1_videomemlab_master_v1_0 is
     m00_axi_awready : in STD_LOGIC;
     m00_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_videomemlab_master_0_1_videomemlab_master_v1_0 : entity is "videomemlab_master_v1_0";
 end main_videomemlab_master_0_1_videomemlab_master_v1_0;
 
 architecture STRUCTURE of main_videomemlab_master_0_1_videomemlab_master_v1_0 is
@@ -6333,6 +6325,8 @@ use UNISIM.VCOMPONENTS.ALL;
 entity main_videomemlab_master_0_1 is
   port (
     IRQ_I : in STD_LOGIC;
+    m00_axi_aclk : in STD_LOGIC;
+    m00_axi_aresetn : in STD_LOGIC;
     m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m00_axi_awvalid : out STD_LOGIC;
@@ -6351,9 +6345,7 @@ entity main_videomemlab_master_0_1 is
     m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m00_axi_rvalid : in STD_LOGIC;
-    m00_axi_rready : out STD_LOGIC;
-    m00_axi_aclk : in STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC
+    m00_axi_rready : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of main_videomemlab_master_0_1 : entity is true;

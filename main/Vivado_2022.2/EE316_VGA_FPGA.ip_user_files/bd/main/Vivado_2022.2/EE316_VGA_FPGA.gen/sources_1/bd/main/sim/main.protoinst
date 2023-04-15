@@ -3,7 +3,7 @@
 	"modules": {
 		"main": {
 			"proto_instances": {
-				"/keyboard_subordinate_0/S00_AXI": {
+				"/keyboard_subordinate_1/S00_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s00_axi_aclk"},

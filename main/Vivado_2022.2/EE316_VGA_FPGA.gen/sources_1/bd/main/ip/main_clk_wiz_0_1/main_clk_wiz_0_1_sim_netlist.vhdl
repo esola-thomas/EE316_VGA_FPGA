@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Fri Apr  7 21:27:08 2023
+-- Date        : Sat Apr 15 17:28:22 2023
 -- Host        : eniac-solathomas running 64-bit Red Hat Enterprise Linux release 8.7 (Ootpa)
 -- Command     : write_vhdl -force -mode funcsim
 --               /repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.gen/sources_1/bd/main/ip/main_clk_wiz_0_1/main_clk_wiz_0_1_sim_netlist.vhdl
@@ -16,9 +16,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity main_clk_wiz_0_1_clk_wiz is
   port (
-    clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC;
-    clk_out3 : out STD_LOGIC;
+    clk_100 : out STD_LOGIC;
+    clk_50 : out STD_LOGIC;
+    clk_125 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
@@ -26,10 +26,10 @@ entity main_clk_wiz_0_1_clk_wiz is
 end main_clk_wiz_0_1_clk_wiz;
 
 architecture STRUCTURE of main_clk_wiz_0_1_clk_wiz is
+  signal clk_100_main_clk_wiz_0_1 : STD_LOGIC;
+  signal clk_125_main_clk_wiz_0_1 : STD_LOGIC;
+  signal clk_50_main_clk_wiz_0_1 : STD_LOGIC;
   signal clk_in1_main_clk_wiz_0_1 : STD_LOGIC;
-  signal clk_out1_main_clk_wiz_0_1 : STD_LOGIC;
-  signal clk_out2_main_clk_wiz_0_1 : STD_LOGIC;
-  signal clk_out3_main_clk_wiz_0_1 : STD_LOGIC;
   signal clkfbout_buf_main_clk_wiz_0_1 : STD_LOGIC;
   signal clkfbout_main_clk_wiz_0_1 : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
@@ -76,18 +76,18 @@ clkin1_ibufg: unisim.vcomponents.IBUF
     );
 clkout1_buf: unisim.vcomponents.BUFG
      port map (
-      I => clk_out1_main_clk_wiz_0_1,
-      O => clk_out1
+      I => clk_100_main_clk_wiz_0_1,
+      O => clk_100
     );
 clkout2_buf: unisim.vcomponents.BUFG
      port map (
-      I => clk_out2_main_clk_wiz_0_1,
-      O => clk_out2
+      I => clk_50_main_clk_wiz_0_1,
+      O => clk_50
     );
 clkout3_buf: unisim.vcomponents.BUFG
      port map (
-      I => clk_out3_main_clk_wiz_0_1,
-      O => clk_out3
+      I => clk_125_main_clk_wiz_0_1,
+      O => clk_125
     );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
@@ -149,11 +149,11 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,
-      CLKOUT0 => clk_out1_main_clk_wiz_0_1,
+      CLKOUT0 => clk_100_main_clk_wiz_0_1,
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
-      CLKOUT1 => clk_out2_main_clk_wiz_0_1,
+      CLKOUT1 => clk_50_main_clk_wiz_0_1,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
-      CLKOUT2 => clk_out3_main_clk_wiz_0_1,
+      CLKOUT2 => clk_125_main_clk_wiz_0_1,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
       CLKOUT3 => NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED,
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
@@ -182,9 +182,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity main_clk_wiz_0_1 is
   port (
-    clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC;
-    clk_out3 : out STD_LOGIC;
+    clk_100 : out STD_LOGIC;
+    clk_50 : out STD_LOGIC;
+    clk_125 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
@@ -197,10 +197,10 @@ architecture STRUCTURE of main_clk_wiz_0_1 is
 begin
 inst: entity work.main_clk_wiz_0_1_clk_wiz
      port map (
+      clk_100 => clk_100,
+      clk_125 => clk_125,
+      clk_50 => clk_50,
       clk_in1 => clk_in1,
-      clk_out1 => clk_out1,
-      clk_out2 => clk_out2,
-      clk_out3 => clk_out3,
       locked => locked,
       reset => reset
     );

@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>solathomas.com</spirit:vendor>
+  <spirit:library>Project_6</spirit:library>
+  <spirit:name>AXI_ps2</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S00_AXI"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_NUM_REG</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">4</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S00_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S00_AXI_reg</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_BASE_PARAM">C_S00_AXI_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_HIGH_PARAM">C_S00_AXI_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesis</spirit:name>
+        <spirit:displayName>VHDL Synthesis</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>keyboard_subordinate_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>9a9e1514</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
+        <spirit:displayName>VHDL Simulation</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>keyboard_subordinate_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>9a9e1514</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_softwaredriver</spirit:name>
+        <spirit:displayName>Software Driver</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:sw.driver</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_softwaredriver_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>4051001d</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>fd592ead</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>bd_tcl</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>bd_tcl_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>45a2f450</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>I_CLK_50</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ps2_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ps2_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>IRQ_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/debounce.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/keyboard_subordinate_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/ps2_keyboard.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/keyboard_subordinate_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_34f5f3fe</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/debounce.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/keyboard_subordinate_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/ps2_keyboard.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/keyboard_subordinate_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>drivers/keyboard_subordinate_v1_0/data/keyboard_subordinate.mdd</spirit:name>
+        <spirit:userFileType>mdd</spirit:userFileType>
+        <spirit:userFileType>driver_mdd</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/keyboard_subordinate_v1_0/data/keyboard_subordinate.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>driver_tcl</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/keyboard_subordinate_v1_0/src/Makefile</spirit:name>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/keyboard_subordinate_v1_0/src/keyboard_subordinate.h</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/keyboard_subordinate_v1_0/src/keyboard_subordinate.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/keyboard_subordinate_v1_0/src/keyboard_subordinate_selftest.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/keyboard_subordinate_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_dda4df14</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>bd_tcl_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>My new AXI IP</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">keyboard_subordinate_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>AXI_PS2_IP</xilinx:displayName>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:keyboard_subordinate:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2023-04-15T21:44:30Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e2260b1_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73d94862_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f401b2e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d84747d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3322e93e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c992c6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@585c1faa_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@791e17c4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46ca7dbc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2840c143_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@238ebf80_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b537716_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c1f9b73_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d66abea_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b18c371_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7544f021_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77948301_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10a25a1_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e51ef52_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b20ae0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1243b515_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b8f606d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4de49b08_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@101a6c46_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22f1b0ee_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@699ef201_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79a50dd5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d68fcea_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36a15611_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47735b5e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f86bdbc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dc52f07_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68df72ed_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7db48e19_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b9624e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@106c42a5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dccbe44_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4539d39b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a4c5d76_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b33ec56_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@568a4182_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@599248fb_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f7ebd_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b12adc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7847ab33_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c0647e3_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63962bd9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30e49d7e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6260c0fb_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@172ef915_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57137108_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39bbd0bc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@397b648a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41151a71_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb4b0d8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@473141ef_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2179cdab_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e407e7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e869ef3_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ee6a73c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f312e4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c7e971c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d720705_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e431e78_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4413c0ac_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@488b1f62_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@637f7346_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cc90d3f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cfbdab3_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f016ac_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57dfeb48_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f8a98dc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cee464b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b559453_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c33a32f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fad45ee_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f6290ab_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@327b7bd2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@742f1e40_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f200e2d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@453c0c09_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d270e6c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@140ba149_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6627640a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4600aa58_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@564dfdbe_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a8ff98_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bb9ff3b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28583d27_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dbed76a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6b03bb_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67dec003_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e57a80_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6238a468_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e91fec_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@912d9a5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5645ae00_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@788679f8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fc29ea4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cc6d662_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38d093fb_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fdd042_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ae8ee59_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60008bac_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f9d3dcd_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d5c92f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@262160d8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22ae4c3e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ad1175c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31ce52e1_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bdda830_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f791f75_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7465c858_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7190f73b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48e194bf_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27139b9f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b59176_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7808216b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@397de831_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58518d59_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d87820_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f6d431e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7624d736_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29990ad7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f0540ee_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42dbbd4a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@740afc0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73979010_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6af6e8ec_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a9c4424_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d447d80_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17a57504_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bfd107e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@645a1d38_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a19c960_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@799c9477_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ef9bbc4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@558524c2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eb720a2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72687c42_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18482a3_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4de6a045_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6301d937_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a9ef5a6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@296787a9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@385200a2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4406f309_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46975d40_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@730b4061_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d72c6c2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5856f32b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30aa71c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33aeaced_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf2aa8c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b84f1a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@105de40a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51d08450_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ae820db_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d34b494_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2648fe58_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44db8943_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11cde58b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a5f3ff9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f22a489_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d6e3a58_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c80556_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@541c7391_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f4af5ea_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d25d3fa_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18bee25f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e783c65_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@617580e7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@442c36_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a9c395a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a2c797d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17d2e75e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55712f14_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1af2ef40_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b0aa615_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4996674e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@222b29c4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3380ad81_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@353319c6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ccc52b9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@153c530f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e610191_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@635536bd_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23fe016d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6300bf73_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37e8ae4e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5312edad_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b8f6b8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ca7cd00_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@589ea35_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fca6936_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21337659_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72c4e932_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@189ecb08_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22c7e606_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f48680c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23da42b2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c492868_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bf5e821_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@155bcd_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2314f720_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bc12e9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f66ea26_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2df62c1f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b10e9b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f4c93f9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19b9e50a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44228179_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@efc6e24_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75965c13_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dc31024_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d2cfb0b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fe40541_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41997a0a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d4f546c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b3b82f0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c0b3a36_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7430d195_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c0e0d73_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6734a585_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40b42ae5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d4430db_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44b094ae_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43af9eee_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b71c2e4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@655548d8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a925d29_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eaf2b65_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10df241d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e1cb39a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7544949c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45f40e78_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60a57a45_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41a76c2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5be7af4f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66e6b5ac_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b03fd1c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@605afca_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b6f6f51_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a3e76c7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d9fdc0a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@731a0364_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36b2b3e8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@440ae12a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4582c46d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b654f11_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@162ef5f7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@612f4844_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6246fb46_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b7a71a4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@299b08f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e8e76e0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@563e633_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46c6568d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d1200a7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5562ab0b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59980de_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62068b7f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@157db3c0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e67d99c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@666fc35b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5175e33a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26b1aec7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36d36d44_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3214df93_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27cccfe0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5777a2de_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59de611a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3919950e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@450bd0fd_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a63f3fc"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f2ca7728"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="e580930a"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d6d597f2"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="1257bdbb"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

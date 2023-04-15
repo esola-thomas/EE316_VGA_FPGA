@@ -6,7 +6,7 @@
 <Project Version="7" Minor="61" Path="/repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.tmp/vga_bram_v1_0_project/vga_bram_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="d55310c4a8ee494bae88102ad3fd7d7d"/>
+    <Option Name="Id" Val="c10512f894104c538c661fd4856a3011"/>
     <Option Name="Part" Val="xc7z007sclg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -50,7 +50,11 @@
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../master/VIvado_IPs/2022.2"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../revised_ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../home/esola-thomas/Downloads/EE316-Lab6-main/ip_repo/vga_bram_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../home/esola-thomas/Downloads/EE316-Lab6-main/ip_repo/keyboard_subordinate_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../home/esola-thomas/Downloads/EE316-Lab6-main/ip_repo/videomemlab_master_1.0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -94,49 +98,41 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../ip_repo/vga_bram_1_0/src/bram.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../ip_repo/vga_bram_1_0/hdl/vga_bram_v1_0_S00_AXI.vhd">
+      <File Path="$PPRDIR/../../../revised_ip_repo/vga_bram_1.0/src/bram.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/vga_bram_1_0/src/vga_sync.vhd">
+      <File Path="$PPRDIR/../../../revised_ip_repo/vga_bram_1.0/src/list_ch12_01_vga_sync.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/vga_bram_1_0/hdl/vga_bram_v1_0.vhd">
+      <File Path="$PPRDIR/../../../revised_ip_repo/vga_bram_1.0/hdl/vga_bram_v1_0_S00_AXI.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/vga_bram_1_0/src/blk_mem_gen_0/blk_mem_gen_0.xci">
+      <File Path="$PPRDIR/../../../revised_ip_repo/vga_bram_1.0/hdl/vga_bram_v1_0.vhd">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/vga_bram_1_0/component.xml">
+      <File Path="$PPRDIR/../../../revised_ip_repo/vga_bram_1.0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="vga_bram_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../ip_repo/vga_bram_1_0/hdl/vga_bram_v1_0.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../revised_ip_repo/vga_bram_1.0/hdl/vga_bram_v1_0.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

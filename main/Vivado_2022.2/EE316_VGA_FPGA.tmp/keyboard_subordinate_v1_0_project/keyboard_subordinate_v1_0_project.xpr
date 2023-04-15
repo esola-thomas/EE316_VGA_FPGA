@@ -6,7 +6,7 @@
 <Project Version="7" Minor="61" Path="/repos/EE316/EE316_VGA_FPGA/main/Vivado_2022.2/EE316_VGA_FPGA.tmp/keyboard_subordinate_v1_0_project/keyboard_subordinate_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ac971d10440245dfa80cbfc4a0c79170"/>
+    <Option Name="Id" Val="0289db9d62054f21aca84d5f343a5f5f"/>
     <Option Name="Part" Val="xc7z007sclg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -50,6 +50,7 @@
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../master/VIvado_IPs/2022.2"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../revised_ip_repo"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../home/esola-thomas/Downloads/EE316-Lab6-main/ip_repo/vga_bram_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../home/esola-thomas/Downloads/EE316-Lab6-main/ip_repo/keyboard_subordinate_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo"/>
@@ -97,41 +98,41 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../ip_repo/keyboard_subordinate_1_0/src/debounce.vhd">
+      <File Path="$PPRDIR/../../../revised_ip_repo/keyboard_subordinate_1.0/src/debounce.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/keyboard_subordinate_1_0/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd">
+      <File Path="$PPRDIR/../../../revised_ip_repo/keyboard_subordinate_1.0/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/keyboard_subordinate_1_0/src/ps2_keyboard.vhd">
+      <File Path="$PPRDIR/../../../revised_ip_repo/keyboard_subordinate_1.0/src/ps2_keyboard.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/keyboard_subordinate_1_0/hdl/keyboard_subordinate_v1_0.vhd">
+      <File Path="$PPRDIR/../../../revised_ip_repo/keyboard_subordinate_1.0/hdl/keyboard_subordinate_v1_0.vhd">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/keyboard_subordinate_1_0/component.xml">
+      <File Path="$PPRDIR/../../../revised_ip_repo/keyboard_subordinate_1.0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="keyboard_subordinate_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../ip_repo/keyboard_subordinate_1_0/hdl/keyboard_subordinate_v1_0.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../revised_ip_repo/keyboard_subordinate_1.0/hdl/keyboard_subordinate_v1_0.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
